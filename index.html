@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-3 OpenAI Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #040C18;
+        }
+        .gradient-text {
+            background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .gradient-bg {
+             background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+        }
+        .section-bg {
+            background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+        }
+        .blog-bg {
+             background: #042c54;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <div id="home" class="main-container section-bg">
+        <!-- Header / Navigation -->
+        <header class="container mx-auto px-6 lg:px-16 py-8">
+            <nav class="relative flex justify-between items-center">
+                <a href="#home" class="text-2xl font-extrabold">GPT-3</a>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div id="nav-menu" class="hidden md:flex md:items-center absolute md:relative top-16 right-0 md:top-auto md:right-auto w-full md:w-auto bg-[#031B34] md:bg-transparent p-6 md:p-0 rounded-lg shadow-lg md:shadow-none z-20">
+                    <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                         <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-white text-center md:text-left">
+                            <li><a href="#home" class="hover:text-gray-300 nav-link">Home</a></li>
+                            <li><a href="#what-is-gpt3" class="hover:text-gray-300 nav-link">What is GPT-3?</a></li>
+                            <li><a href="#open-ai" class="hover:text-gray-300 nav-link">Open AI</a></li>
+                            <li><a href="#case-studies" class="hover:text-gray-300 nav-link">Case Studies</a></li>
+                            <li><a href="#library" class="hover:text-gray-300 nav-link">Library</a></li>
+                        </ul>
+                        <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 mt-6 md:mt-0 pt-6 md:pt-0 md:ml-8 border-t md:border-t-0 border-gray-700 md:border-l md:pl-6">
+                            <a href="#" class="hover:text-gray-300 text-center md:text-left">Sign in</a>
+                            <a href="#" id="signUpBtn" class="bg-[#FF4820] text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 text-center">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 lg:px-16 pt-16 pb-24">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Left Content -->
+                <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight gradient-text mb-8">
+                        Let's Build Something amazing with GPT-3 OpenAI
+                    </h1>
+                    <p class="text-[#81AFDD] mb-10 max-w-lg mx-auto lg:mx-0">
+                        Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.
+                    </p>
+                    <div class="flex flex-col sm:flex-row max-w-md mx-auto lg:mx-0">
+                        <input type="email" id="emailInput" placeholder="Your Email Address" class="flex-grow bg-[#052D56] text-white placeholder-gray-400 px-6 py-4 rounded-l-md focus:outline-none mb-4 sm:mb-0">
+                        <button id="heroGetStartedBtn" class="bg-[#FF4820] text-white px-8 py-4 rounded-r-md font-bold hover:bg-opacity-90">Get Started</button>
+                    </div>
+                </div>
+                <!-- Right Image -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="image/headdd.png" alt="AI Face" class="w-full max-w-md lg:max-w-none">
+                </div>
+            </div>
+             <!-- Company Logos -->
+             <div class="flex justify-center items-center flex-wrap gap-8 mt-16">
+                <img src="https://placehold.co/100x30/040c18/ffffff?text=google" alt="Google" class="h-6 opacity-70">
+                <img src="https://placehold.co/100x30/040c18/ffffff?text=slack" alt="Slack" class="h-6 opacity-70">
+                <img src="https://placehold.co/100x30/040c18/ffffff?text=atlassian" alt="Atlassian" class="h-6 opacity-70">
+                <img src="https://placehold.co/100x30/040c18/ffffff?text=dropbox" alt="Dropbox" class="h-6 opacity-70">
+                <img src="https://placehold.co/100x30/040c18/ffffff?text=shopify" alt="Shopify" class="h-6 opacity-70">
+            </div>
+        </section>
+    </div>
+
+    <main class="text-white">
+
+        <!-- What is GPT-3 Section -->
+        <section id="what-is-gpt3" class="container mx-auto px-6 lg:px-16 py-24 bg-[#042c54] p-16">
+             <div class="flex flex-col md:flex-row mb-16">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-2"></div>
+                    <h2 class="text-2xl font-extrabold">What is GPT-3</h2>
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-[#81AFDD]">We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own. Connection has put impossible own apartments boisterous. At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by.</p>
+                </div>
+            </div>
+             <div class="flex flex-col md:flex-row justify-between items-start mb-16">
+                 <h2 class="text-4xl font-extrabold gradient-text max-w-lg leading-tight mb-8 md:mb-0">The possibilities are beyond your imagination</h2>
+                 <a href="#" class="text-[#FF8A71] hover:underline">Explore The Library</a>
+             </div>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                 <div>
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-4"></div>
+                     <h3 class="text-2xl font-extrabold mb-8">Chatbots</h3>
+                     <p class="text-[#81AFDD]">We so opinion friends me message as delight. Whole front do of plate heard oh ought. </p>
+                 </div>
+                 <div>
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-4"></div>
+                     <h3 class="text-2xl font-extrabold mb-8">Knowledgebase</h3>
+                     <p class="text-[#81AFDD]">At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments.</p>
+                 </div>
+                 <div>
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-4"></div>
+                     <h3 class="text-2xl font-extrabold mb-8">Education</h3>
+                     <p class="text-[#81AFDD]">At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments.</p>
+                 </div>
+             </div>
+        </section>
+
+        <!-- The Future is Now Section -->
+        <section id="case-studies" class="container mx-auto px-6 lg:px-16 py-24">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="lg:w-1/2 mb-16 lg:mb-0">
+                    <h2 class="text-4xl font-extrabold gradient-text max-w-md leading-tight mb-8">The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen.</h2>
+                    <a href="#" class="text-[#FF8A71] hover:underline functional-link">Request Early Access to Get Started</a>
+                </div>
+                <div class="lg:w-1/2 lg:pl-16 space-y-10">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-2"></div>
+                            <h3 class="text-lg font-bold">Improving end distrusts instantly</h3>
+                        </div>
+                        <p class="text-[#81AFDD] max-w-xs ml-4">From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded.</p>
+                    </div>
+                     <div class="flex justify-between items-start">
+                        <div>
+                            <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-2"></div>
+                            <h3 class="text-lg font-bold">Become the tended active</h3>
+                        </div>
+                        <p class="text-[#81AFDD] max-w-xs ml-4">Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to.</p>
+                    </div>
+                     <div class="flex justify-between items-start">
+                        <div>
+                           <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-2"></div>
+                            <h3 class="text-lg font-bold">Message or am nothing</h3>
+                        </div>
+                        <p class="text-[#81AFDD] max-w-xs ml-4">Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.</p>
+                    </div>
+                     <div class="flex justify-between items-start">
+                        <div>
+                            <div class="w-10 h-1 bg-gradient-to-r from-[#AE67FA] to-[#F49867] mb-2"></div>
+                            <h3 class="text-lg font-bold">Really boy law county</h3>
+                        </div>
+                        <p class="text-[#81AFDD] max-w-xs ml-4">Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VR Possibilities Section -->
+        <section id="open-ai" class="container mx-auto px-6 lg:px-16 py-16">
+             <div class="flex flex-col lg:flex-row items-center">
+                 <div class="lg:w-2/5 mb-12 lg:mb-0">
+                    <img src="image/VR.png" alt="Person wearing VR headset" class="w-full">
+                 </div>
+                 <div class="lg:w-3/5 lg:pl-24 text-center lg:text-left">
+                    <a href="#" class="text-[#71E5FF] functional-link">Request Early Access to Get Started</a>
+                    <h2 class="text-4xl font-extrabold gradient-text max-w-lg leading-tight my-6 mx-auto lg:mx-0">The possibilities are beyond your imagination</h2>
+                    <p class="text-[#81AFDD] max-w-lg mb-8 mx-auto lg:mx-0">Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
+                    <a href="#" class="text-[#FF8A71] hover:underline functional-link">Request Early Access to Get Started</a>
+                 </div>
+             </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="container mx-auto px-6 lg:px-16 py-16">
+            <div class="gradient-bg rounded-lg flex flex-col md:flex-row justify-between items-center p-8 md:p-12">
+                <div>
+                    <p class="text-sm font-medium">Request Early Access to Get Started</p>
+                    <h3 class="text-2xl font-extrabold text-black">Register today & start exploring the endless possibilities.</h3>
+                </div>
+                <button class="bg-black text-white px-8 py-4 rounded-full font-bold mt-6 md:mt-0 hover:bg-gray-800 flex-shrink-0 functional-btn">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="library" class="container mx-auto px-6 lg:px-16 py-24">
+            <h2 class="text-4xl md:text-5xl font-extrabold gradient-text max-w-2xl leading-tight mb-24">A lot is happening, <br>We are blogging about it.</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Blog Post -->
+                <div class="lg:col-span-1">
+                    <div class="blog-bg flex flex-col h-full">
+                        <img src="image/re1.jpg" alt="Blog Image" class="w-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs mb-2">Sep 26, 2021</p>
+                            <h3 class="text-2xl font-bold mb-8 flex-grow">GPT-3 and Open  AI is the future. Let us exlore how it is?</h3>
+                            <a href="#" class="text-sm mt-auto hover:underline">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Smaller Blog Posts -->
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                     <div class="blog-bg flex flex-col">
+                        <img src="image/re5.jpg" alt="Blog Image" class="w-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs mb-2">Sep 26, 2022</p>
+                            <h3 class="text-xl font-bold mb-4 flex-grow">GPT-3 and Open  AI is the future. Let us exlore how it is?</h3>
+                            <a href="#" class="text-sm mt-auto hover:underline">Read Full Article</a>
+                        </div>
+                    </div>
+                    <div class="blog-bg flex flex-col">
+                        <img src="image/re4.jpg" alt="Blog Image" class="w-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs mb-2">Sep 26, 2023</p>
+                            <h3 class="text-xl font-bold mb-4 flex-grow">GPT-3 and Open  AI is the future. Let us exlore how it is?</h3>
+                            <a href="#" class="text-sm mt-auto hover:underline">Read Full Article</a>
+                        </div>
+                    </div>
+                    <div class="blog-bg flex flex-col">
+                        <img src="image/re3.jpg" alt="Blog Image" class="w-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs mb-2">Sep 26, 2024</p>
+                            <h3 class="text-xl font-bold mb-4 flex-grow">GPT-3 and Open  AI is the future. Let us exlore how it is?</h3>
+                            <a href="#" class="text-sm mt-auto hover:underline">Read Full Article</a>
+                        </div>
+                    </div>
+                    <div class="blog-bg flex flex-col">
+                        <img src="image/re2.jpg" alt="Blog Image" class="w-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs mb-2">Sep 26, 2025</p>
+                            <h3 class="text-xl font-bold mb-4 flex-grow">GPT-3 and Open  AI is the future. Let us exlore how it is?</h3>
+                            <a href="#" class="text-sm mt-auto hover:underline">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#031B34] pt-24 pb-8 text-white">
+        <div class="container mx-auto px-6 lg:px-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold gradient-text max-w-3xl mx-auto leading-tight mb-12">Do you want to step in to the future before others</h2>
+            <a href="#" class="border border-white px-8 py-4 hover:bg-white hover:text-black transition-colors duration-300 functional-link">Request Early Access</a>
+        </div>
+        
+        <div class="container mx-auto px-6 lg:px-16 mt-24 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-extrabold">GPT-3</h3>
+                <p class="text-sm">Crechterwoord K12 182 DK Alknjkcb, <br> All Rights Reserved</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-bold">Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Overons</a></li>
+                    <li><a href="#" class="hover:underline">Social Media</a></li>
+                    <li><a href="#" class="hover:underline">Counters</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-bold">Company</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+             <div class="space-y-4">
+                <h4 class="font-bold">Get in touch</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Crechterwoord K12 182 DK Alknjkcb</a></li>
+                    <li><a href="#" class="hover:underline">085-132567</a></li>
+                    <li><a href="#" class="hover:underline">info@payme.net</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center text-sm mt-20">© 2025 GPT-3. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="feedbackModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-[#042c54] p-8 rounded-lg shadow-xl text-center max-w-sm mx-auto">
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4">Thank You!</h3>
+            <p id="modalMessage" class="text-[#81AFDD] mb-6">You've successfully signed up. We'll be in touch shortly.</p>
+            <button id="closeModalBtn" class="bg-[#FF4820] text-white px-6 py-2 rounded-md font-medium hover:bg-opacity-90">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Modal functionality
+            const emailInput = document.getElementById('emailInput');
+            const heroGetStartedBtn = document.getElementById('heroGetStartedBtn');
+            const signUpBtn = document.getElementById('signUpBtn');
+            const feedbackModal = document.getElementById('feedbackModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const functionalBtns = document.querySelectorAll('.functional-btn');
+            const functionalLinks = document.querySelectorAll('.functional-link');
+            
+            const showModal = (title, message) => {
+                modalTitle.textContent = title;
+                modalMessage.textContent = message;
+                feedbackModal.classList.remove('hidden');
+                feedbackModal.classList.add('flex');
+            };
+
+            const hideModal = () => {
+                feedbackModal.classList.add('hidden');
+                feedbackModal.classList.remove('flex');
+            };
+            
+            heroGetStartedBtn.addEventListener('click', () => {
+                if (emailInput.value.trim() === '' || !emailInput.value.includes('@')) {
+                    showModal('Invalid Email', 'Please enter a valid email address to get started.');
+                } else {
+                    showModal('Thank You!', `We've sent a confirmation to ${emailInput.value}.`);
+                    emailInput.value = '';
+                }
+            });
+
+            signUpBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showModal('Sign Up', 'Thank you for your interest in signing up!');
+            });
+
+            functionalBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showModal('Request Sent', 'Thank you! Your request for early access has been received.');
+                });
+            });
+
+             functionalLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showModal('Request Sent', 'Thank you! Your request for early access has been received.');
+                });
+            });
+
+            closeModalBtn.addEventListener('click', hideModal);
+
+            feedbackModal.addEventListener('click', (event) => {
+                if (event.target === feedbackModal) {
+                    hideModal();
+                }
+            });
+
+            // Navigation functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = navMenu.querySelectorAll('.nav-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!navMenu.classList.contains('md:flex')) {
+                         navMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
